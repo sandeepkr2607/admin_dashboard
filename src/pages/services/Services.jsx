@@ -20,11 +20,11 @@ const Services = () => {
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  }, [services]);
 
   return (
     <div className={css.services}>
-      <h2 className={css.heading}>Users List</h2>
+      <h2 className={css.heading}>Service List</h2>
       <table>
         <tr>
           <th>Service Provider</th>

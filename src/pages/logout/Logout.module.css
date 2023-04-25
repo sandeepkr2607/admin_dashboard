@@ -1,0 +1,35 @@
+.logout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  color: #8be2fd;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.btns {
+  display: flex;
+  gap: 30px;
+}
+
+.btn {
+  padding: 10px 30px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #8be2fd;
+  background-color: #fff;
+  border: 2px solid #8be2fd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #8be2fd;
+  color: #fff;
+}

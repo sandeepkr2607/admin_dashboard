@@ -20,7 +20,7 @@ const Users = () => {
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  }, [users]);
 
   return (
     <div className={css.users}>
@@ -34,7 +34,9 @@ const Users = () => {
         {users.map((val, key) => {
           return (
             <tr key={key}>
-              <td>{val.fullName}</td>
+              <td className={css.name}>
+                {val.fullName ? val.fullName : 'Anonymous'}
+              </td>
               <td>{val.address?.Name}</td>
               <td>{val.gender}</td>
             </tr>

@@ -5,6 +5,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Users from './pages/users/Users';
 import Services from './pages/services/Services';
 import Sidebar from './components/sidebar/Sidebar';
+import Logout from './pages/logout/Logout';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/logout" element={<Logout />} />
           </Routes>
         </Sidebar>
       </BrowserRouter>

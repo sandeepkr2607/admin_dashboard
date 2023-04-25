@@ -3,8 +3,8 @@ import css from './Sidebar.module.css';
 import { MdSpaceDashboard } from 'react-icons/md';
 import { FaUsers } from 'react-icons/fa';
 import { MdHomeRepairService } from 'react-icons/md';
-import { BiLogIn } from 'react-icons/bi';
-import { FaBars } from 'react-icons/fa';
+import { BiLogIn, BiLogOut } from 'react-icons/bi';
+import { FaBars, FaCity } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = ({ children }) => {
@@ -31,6 +31,11 @@ const Sidebar = ({ children }) => {
       name: 'Login',
       icon: <BiLogIn />,
     },
+    {
+      path: '/logout',
+      name: 'Logout',
+      icon: <BiLogOut />,
+    },
   ];
 
   return (
@@ -38,7 +43,7 @@ const Sidebar = ({ children }) => {
       <div style={{ width: isOpen ? '250px' : '70px' }} className="sidebar">
         <div className="top_section">
           <h1 style={{ display: isOpen ? 'block' : 'none' }} className="logo">
-            Logo
+            <FaCity className={css.logo} />
           </h1>
           <div
             style={{ marginLeft: isOpen ? '150px' : '0px' }}
