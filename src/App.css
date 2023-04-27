@@ -15,7 +15,7 @@ main {
 }
 .sidebar {
   background: #fff;
-  color: #8be2fd;
+  color: #0288d1;
   height: 100vh;
   width: 280px;
   transition: all 0.5s;
@@ -39,7 +39,7 @@ main {
 .link {
   display: flex;
   align-items: center;
-  color: #8be2fd;
+  color: #0288d1;
   padding: 13px 15px;
   gap: 20px;
   transition: all 0.5s;
@@ -49,10 +49,10 @@ main {
 .link:hover {
   transition: all 0.5s;
   cursor: pointer;
-  border: 2px solid #8be2fd;
+  border: 2px solid #0288d1;
 }
 .active {
-  background: lightskyblue;
+  background: #0288d1;
   color: #fff;
   cursor: pointer;
 }

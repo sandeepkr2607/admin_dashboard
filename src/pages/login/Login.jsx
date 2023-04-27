@@ -17,20 +17,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
-    color: '#8be2fd',
+    color: '#0288d1',
   },
   '& .MuiInput-underline:after': {
-    borderBottomColor: '#8be2fd',
+    borderBottomColor: '#0288d1',
   },
   '& .MuiOutlinedInput-root': {
     '& fieldset': {
-      borderColor: '#8be2fd',
+      borderColor: '#0288d1',
     },
     '&:hover fieldset': {
-      borderColor: '#8be2fd',
+      borderColor: '#0288d1',
     },
     '&.Mui-focused fieldset': {
-      borderColor: '#8be2fd',
+      borderColor: '#0288d1',
     },
   },
 });
@@ -91,12 +91,14 @@ const Login = () => {
             <h3 className={css.form_title}>Login</h3>
             <CssTextField
               label="Email"
+              type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <CssTextField
               label="Password"
+              type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

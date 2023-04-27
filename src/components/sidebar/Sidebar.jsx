@@ -26,11 +26,7 @@ const Sidebar = ({ children }) => {
       name: 'Services',
       icon: <MdHomeRepairService />,
     },
-    {
-      path: '/login',
-      name: 'Login',
-      icon: <BiLogIn />,
-    },
+
     {
       path: '/logout',
       name: 'Logout',
