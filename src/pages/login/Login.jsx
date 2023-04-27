@@ -10,6 +10,10 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { styled } from '@mui/material/styles';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+// import { response } from 'express';
 
 const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
@@ -36,6 +40,7 @@ const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // const [error, setError] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
   const LoginFunc = async (e) => {
@@ -53,10 +58,22 @@ const Login = () => {
         navigate('/dashboard');
       })
       .catch((err) => {
-        console.log(err.message);
+        if ((err.response.status = 401)) {
+          toast('Invalid Credentials!', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+          });
+        } else console.log(err.message);
       });
   };
 
+  // console.log(error);
   return (
     <>
       <div className={css.login}>
@@ -92,12 +109,27 @@ const Login = () => {
               value={rememberMe}
               onChange={() => setRememberMe(!rememberMe)}
             />
+            {/* {error && <h4> {error}</h4>} */}
             <button type="submit" className={css.btn} onClick={LoginFunc}>
               Submit
             </button>
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
     </>
   );
 };

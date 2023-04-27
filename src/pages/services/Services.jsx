@@ -8,13 +8,13 @@ const headers = {
 
 const Services = () => {
   const [services, setServices] = useState([]);
-  console.log(headers);
+  // console.log(headers);
 
   useEffect(() => {
     axios
       .get('https://www.cyber7work.com/api/v1/admin/services', { headers })
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setServices(res.data.data);
       })
       .catch((err) => {
